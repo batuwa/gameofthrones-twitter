@@ -12,15 +12,15 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
-##  Game of thrones
+##  Game of thrones hastags to search
 search_query = "#got OR #gameofthrones OR #got8" + " -filter:retweets"
 
 # Open/Create a file to append data
-csvFile = open('got_new.csv', 'a')
+csvFile = open('data/got_s8e1.csv', 'a')
 
 # Use csv Writer
 csvWriter = csv.writer(csvFile)
-# csvWriter.writerow(['created_at', 'tweet_id', 'user', 'location', 'text', 'likes', 'retweets'])
+csvWriter.writerow(['created_at', 'tweet_id', 'user', 'location', 'text', 'likes', 'retweets'])
 
 
 ## Search query API Documentation
